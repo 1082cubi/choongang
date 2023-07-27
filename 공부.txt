@@ -33,12 +33,27 @@ shift + a/t + 밑 화살표: 같은 줄 복사
 img 태그 안에 src 속성은 경로를 의미한다.
 
 <br> : 줄 바꿈 태그
-<p> :  문장태그
-   - 자동으로 줄바꿈(2줄)
-<span>글자 태그</span>
+<p> :  문장태그 자동으로 줄바꿈(2줄)
+ - p태그안에 p 못들어간다
+ - p태그안에 div 못들어간다
+img : 그림태그
+div : 항복구분 태그 (공간 구분 태그)
+ -- div태그안에 div 들어간다
+  -- div태그안에 p 들어간다
+
+  span : 글자태그
+  img : 그림태그
+  inline요소 : 한줄에 여러개의 태그가 온다 (span, img,a)
+  blick 요소 : 한 줄에 하나 개의 태그만 온다(p,div,li,ul)
+
+
+
+
  <img src="img 4.jfif" alt="">
 
-html : 인터넷에 데이터를 표시해 주는 언어
+html : 
+
+인터넷에 데이터를 표시해 주는 언어
 css: html을 디자인 해주는 언어
 디자인 방법(style)
 
@@ -51,14 +66,14 @@ margin: 바깥쪽
 td : 칸 만들기
 td*2 : 두줄 만들기
 ctrl + /: 주석 (해설) - 실행하지 않음
-<table align="center"> - 가운데로 옮기기
-margin-left : 35% 가운데로 옮기기
+ - 가운데로 옮기기
+margin: : 테두리가 가운데로 이동하는 것
 <text-align: center> : 글씨 가운데로 옮기기
 <font-size: 20px;> : 글자 크기 조절
 <height: 70px;> : td 높이 조절
 <border: 1px solid black;> 표 줄 색깔
-border: 0px : 표줄크기조절 (제목)
- <table cellspacing="0"> : 줄칸 띄어쓰기
+
+ <table cellspacing="0"> : 칸 붙이는 거
  <caption> 햄버거 비교표</caption>: 제목크키
  </thead> : 제목 소개
  </tbody> : 본문내용
@@ -77,3 +92,19 @@ class : 가능하다 중복이
 hover : 마우스가 갔을 때 칸이 색깔이 변하는 것
 인라인스타일> 내부스타일 >외부스타일
 <td rowspan="2" : 밑에 줄이랑 합친
+
+div.menu = <div class="menu">
+inherit : 부모랑 똑같이 간다
+div : 항복구분 태그 (공간 구분 태그)
+line-height : 글자 높이 조정
+display: flex; : div 가로로 만드는것
+justify-content: space-between : 사이사이 공간을 만들어라
+글자 평균크기 : 16
+rem : 글자크기 두배 
+ 글자사이즈:   font-size: 1.5rem; 1=16(크기 지정할수있다)
+    background: url(../) 꺼내오는거
+    width (가로)  height (세로)
+    font-size: 3rem; : 글자크키
+    border-radius: 표칸 꼭지점 각도?
+    font-weight : : bold 글자 모양 변경
+

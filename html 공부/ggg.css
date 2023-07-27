@@ -1,0 +1,16 @@
+.pink{
+    border: 2px solid red;
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+.naver{
+    border: 3px solid;
+    width: 90%;
+    margin: 50px auto;
+}
+ 
+.naver tr td{
+    text-align: center;
+    
+}
