@@ -97,7 +97,7 @@ div.menu = <div class="menu">
 inherit : 부모랑 똑같이 간다
 div : 항복구분 태그 (공간 구분 태그)
 line-height : 글자 높이 조정
-display: flex; : div 가로로 만드는것
+display: flex; : (((가로로)) 만드는것
 justify-content: space-between : 사이사이 공간을 만들어라
 글자 평균크기 : 16
 rem : 글자크기 두배 
@@ -108,3 +108,26 @@ rem : 글자크기 두배
     border-radius: 표칸 꼭지점 각도?
     font-weight : : bold 글자 모양 변경
 
+    list-style-type: none; 
+    앞에 123 없애는 것
+    padding : 0% 때만 앞에 안뛰게 하는 것
+
+
+<ol>순서 있는 목록 태그가
+ul : 순서 없는 목록 태그
+</ol>
+<ul>
+</ul>
+
+position : 위치를 지정하는 속성
+absolute : 절대 주소 기준은 부모 ,합치는것
+fixed : 고정된 주소 기준은 왼쪽 / 위쪽 (0.0)
+relative : 상대 주소 기준은 자기 자리
+top, left, right, bottom 지정 할 수 있다
+z-index (레이어 개념) 위/아래 설정(레벨) 가장 위에 올라고 겠다
+absolute fixed 설정이 되면 (위치를 지정) 공중에 붕 뜬다
+옵솔르트와 픽스드는 높이는 퍼센트로 할수있다
+transform: translateX(-50%) width : 150px = 70 
+선택자 : class, id
+id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하다)
+<div class="skip" onclick="vid.style.display='none'">

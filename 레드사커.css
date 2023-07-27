@@ -1,3 +1,8 @@
+* {
+    list-style: none;
+    padding: 0;
+}
+
 .table {
     border: 0px solid;
     width: 100%;
@@ -13,7 +18,7 @@
     height: 40px;
     text-align: center;
     line-height: 35px;
-    color: black
+    color: white;
 }
 
 .table div:first-child {
@@ -25,46 +30,18 @@
     width: 10%;
     font-weight: bold;
     background-color: black;
-    color: white;
 }
 
-.table div:nth-child(3) {
-    color: white;
-}
+
 
 .table div:nth-child(4) {
     width: 7%;
-    color: white;
 }
 
 .table div:nth-child(5) {
     width: 6%;
-    color: white;
 }
 
-.table div:nth-child(6) {
-    color: white;
-}
-
-.table div:nth-child(7) {
-    color: white;
-}
-
-.table div:nth-child(8) {
-    color: white;
-}
-
-.table div:nth-child(9) {
-    color: white;
-}
-
-.table div:nth-child(10) {
-    color: white;
-}
-
-.table div:nth-child(11) {
-    color: white;
-}
 
 .table div:last-child {
     width: 12%;
@@ -94,8 +71,9 @@
 .can div:nth-child(3) {
     width: 39.5%;
 }
+
 .can div:nth-child(4) {
-    font-size: 13px;  
+    font-size: 13px;
 }
 
 .can div:last-child {
@@ -105,23 +83,141 @@
 .cann {
     display: flex;
     margin-top: 15px;
-    
+
 }
+
 .cann div:first-child {
     border: 1px solid;
-    width: 9%;height: 550px;
+    width: 9%;
+    height: 550px;
     margin-left: 6%;
-    
+
 }
-.cann div .caaa div 
 
-
-.cann div:nth-child(2) {
+.cann div .caaa div .cann div:nth-child(2) {
     border: 1px solid;
     width: 40%;
 }
+
 .cann div:last-child {
     border: 1px solid;
     width: 30%;
 
+}
+
+.text {
+    border: 1px solid;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.text li {
+    border: 1px solid red;
+    width: 250px;
+    height: 100%;
+
+}
+
+.text li:first-child {
+    width: 10%;
+    height: 100%;
+     
+}
+
+.text li:first-child div {
+    border: 1px solid;
+    width: 100%;
+    height: 19.6%;
+}
+
+.text li div:first-child {
+    background: url(111.png);
+    background-size: 100% 100%;
+}
+
+.text li:nth-child(1) div:nth-child(2) {
+    background: url(222.png);
+    background-size: 100% 100%;
+}
+
+.text li:nth-child(1) div:nth-child(3) {
+    background: url(333.png);
+    background-size: 100% 100%;
+}
+
+.text li:nth-child(1) div:nth-child(4) {
+    background: url(444.png);
+    background-size: 100% 100%;
+}
+
+.text li:nth-child(1) div:nth-child(5) {
+    background: url(555.png);
+    background-size: 100% 100%;
+}
+
+.text li:nth-child(2) {
+    width: 60%;
+    background: url(ggg1\ \(1\).jpg);
+
+}
+
+.text li:nth-child(3) div:first-child {
+    background: url(.//777.png);
+    background-size: 100% 100%;
+    border: 0px solid;
+    width: 100%; height: 250px;
+}
+
+
+.text li:nth-child(3) div:nth-child(2) p {
+    margin: 0 auto;
+    border: 0px solid; width: 100%;
+    text-align: center;
+    font-weight:bold
+}
+.text li:nth-child(3) div:nth-child(3) span {
+    
+    text-align: center
+}
+.text li:nth-child(3) div:nth-child(3) span:first-child {
+    margin-left: 20px;
+    font-size: 14px;
+}
+.text li:nth-child(3) div:nth-child(3) span:last-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.text li:nth-child(3) {
+    margin-right: ;
+}
+.text li:nth-child(3) div:nth-child(4) {
+    border-top: 4px solid;
+    color: rgb(94, 92, 91);
+}
+.text li:nth-child(3) div:nth-child(4) span {
+border: px solid;
+font-size: 5px;
+color: rgb(136, 132, 132)
+
+}
+.text li:nth-child(3) div:nth-child(4) span:first-child{
+    color: rgb(66, 64, 59);
+    font-weight: bold;
+}
+.text li:nth-child(3) div:nth-child(4) span:last-child {
+    margin-left: 110px;
+}
+.text li:nth-child(3) div:nth-child(5) p {
+    font-size: 13px;
+    color: rgb(148, 146, 143);
+}
+.text li:nth-child(3) div:nth-child(5) p:nth-child(3) {
+    font-weight: bold;
+    color: rgb(63, 62, 61);
+}
+.taxt li:last-child{
+    margin-right: %;
 }
