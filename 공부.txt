@@ -99,6 +99,7 @@ div : 항복구분 태그 (공간 구분 태그)
 line-height : 글자 높이 조정
 display: flex; : (((가로로)) 만드는것
 justify-content: space-between : 사이사이 공간을 만들어라
+justify-content : center : 텍스트 가운데 공간을 없애고 가운대로 집합
 글자 평균크기 : 16
 rem : 글자크기 두배 
  글자사이즈:   font-size: 1.5rem; 1=16(크기 지정할수있다)
@@ -131,3 +132,31 @@ transform: translateX(-50%) width : 150px = 70
 선택자 : class, id
 id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하다)
 <div class="skip" onclick="vid.style.display='none'">
+    
+    
+    margin: 0; 바깥 테두리 공간
+    list-style: none : li,ol,ul 왼쪽 시작을 없애주는 것
+    padding: 0; 안쪽 테두리 공간
+
+    p:
+    span : 
+    a: 문서를 연결 태그
+     - 자동으로 손가락이 나온다
+     -밑줄이 그어짐
+     -글자색이 파랑
+     -인라인요소
+     -display: block 인라인요소를 블록으로 바꿔준다
+    text-decoration: none : 모든 글자 꾸민 효과를 없애는 것
+    <a href="">내용</a>     예 <li><a href=""> Hansot</a></li>
+     -<a href="https://www.hsd.co.kr/franchise/hansot_store"target="ch">
+     -<iframe name="ch" frameborder="0"></iframe> 이름 즉 네임을 설정을 ch를 해야한다
+    ifame : 작은 화면 
+    선택자 : class, id, name
+    사진이 div에 있으면 div에 hover 를 지정해야 한다
+     overflow: hidden : 자식이 부모보다 더 넘지 말라 사진 동영상 등등
+     transition: 0.5s :시간을 조절
+     transform: scale(1.5); : 커져라 
+     transform : 커져라 이동해라 등등 명령할 수 있는 
+     font-weight: bold: 글자 굴기 
+     <iframe name="ch" frameborder="0" </iframe> 화면속에 화면 띄우는것
+     src="https://www.hsd.co.kr/"> 새로고침해도 안없어지게 하는것
