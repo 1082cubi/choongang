@@ -120,7 +120,7 @@ ul : 순서 없는 목록 태그
 <ul>
 </ul>
 
-position : 위치를 지정하는 속성
+position : 위치를 지정하는 속성 고정할수 있는 태그(광고 사이드)
 absolute : 절대 주소 기준은 부모 ,합치는것
 fixed : 고정된 주소 기준은 왼쪽 / 위쪽 (0.0)
 relative : 상대 주소 기준은 자기 자리
@@ -141,10 +141,10 @@ id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하�
     p:
     span : 
     a: 문서를 연결 태그
-     - 자동으로 손가락이 나온다
-     -밑줄이 그어짐
-     -글자색이 파랑
-     -인라인요소
+      - 자동으로 손가락이 나온다
+      -밑줄이 그어짐
+      -글자색이 파랑
+      -인라인요소
      -display: block 인라인요소를 블록으로 바꿔준다
     text-decoration: none : 모든 글자 꾸민 효과를 없애는 것
     <a href="">내용</a>     예 <li><a href=""> Hansot</a></li>
@@ -160,3 +160,62 @@ id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하�
      font-weight: bold: 글자 굴기 
      <iframe name="ch" frameborder="0" </iframe> 화면속에 화면 띄우는것
      src="https://www.hsd.co.kr/"> 새로고침해도 안없어지게 하는것
+
+
+     시멘틱태그 : 의미있는 태그들 
+     <header> : 제목 태그
+     <nav> : 메뉴태그 
+     <section> 본문 내용 태그
+     <article> 상세 내용 태그
+     <footer> 꼬리말 태그(회사주소/전화번호 기타등등)
+     <aside> 광고/배너
+     
+     display 를 쓰면 
+     justify 와
+     align-items: center: 세로 높이를 센터로 옮겨라 
+     display: 
+
+     웹폰트 : 인터넷 상에서 웹아이콘 제공(구글)
+     자식 태그에 position을 설정하려면 부모 태그에도 position이 있어야 한다
+     (없으면 자식 태그들은 부모를 벗어난다.)
+    text-indent : 글자를 이동
+      <small> : header제목보다 조금 작은 글씨할때
+
+    position: relative(부모) : position: absolute 이걸 할려면 부모가 잡아줘야한다
+     position: absolute(자식) : 하나로 모이게 하는것
+     
+     ㄷ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section>
+         컴퓨터(대분류)
+          <article>
+              프로그램
+               <section>
+               자바 
+                  <article>
+                     연산자
+                  </article>
+               </section>
+          </article>
+      </section>
+
+      text-indent : 글자를 이동
+      <small> : header제목보다 조금 작은 글씨할때
+
+
