@@ -184,7 +184,10 @@ id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하�
     position: relative(부모) : position: absolute 이걸 할려면 부모가 잡아줘야한다
      position: absolute(자식) : 하나로 모이게 하는것
      
-     ㄷ
+     animation : 움직임
+     -움직임의 시작 : from /0%
+     -움직임의 끝 : to 100%
+      animation-fill-mode: forwards : 움직임 했다가 마지막에는 멈추는것
 
 
 
