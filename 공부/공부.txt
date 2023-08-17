@@ -1,0 +1,628 @@
+23. 07 . 25
+UI 디자인 : 사용자가 편하게 아름답게
+UX 디자인 : 사용자 만족했느냐 ( 정보가 유익했다/ 도움이 됐다)
+굿디자인 : 재미있고 유익한 웹/앱 사이트를 제작
+
+Edit : vsc 
+환경설정
+ lice sever : 결과미리 보기
+auto rename : 앞뒤 태그를 같게 해줌
+elm emmet :빠른 코딩 (자동코딩)
+ctrl + : 크게
+ctrl - : 작게
+
+웹
+<!DOCTYPE html>    // html5  문서임을 표시
+
+tml                               tml 시작
+
+
+<head>
+<tittle>테스트문서</tittle> 문서제목
+<meta charset=""utf-8" />  사용 코드 이름 : "utf-8 (유니코드) 전 세계 언어를 표현가능 코드
+<head>  
+                        이문서의 정보를 제공
+</body>
+  본문 내용 시작
+ 정보를 제공
+tml           끝
+shift + a/t + 밑 화살표: 같은 줄 복사
+
+태그(명령어)
+태그 안에 있는 옵션을 속성
+img 태그 안에 src 속성은 경로를 의미한다.
+
+<br> : 줄 바꿈 태그
+<p> :  문장태그 자동으로 줄바꿈(2줄)
+ - p태그안에 p 못들어간다
+ - p태그안에 div 못들어간다
+img : 그림태그
+div : 항복구분 태그 (공간 구분 태그)
+ -- div태그안에 div 들어간다
+  -- div태그안에 p 들어간다
+
+  span : 글자태그
+  img : 그림태그
+  inline요소 : 한줄에 여러개의 태그가 온다 (span, img,a)
+  blick 요소 : 한 줄에 하나 개의 태그만 온다(p,div,li,ul)
+
+
+
+
+ <img src="img 4.jfif" alt="">
+
+html : 
+
+인터넷에 데이터를 표시해 주는 언어
+css: html을 디자인 해주는 언어
+디자인 방법(style)
+
+<p style="border: 1px solid black">
+inline style : 태그 안에 스타일 지정
+내부스타일 : <head>와 </head> 사이에 스타일 지정
+margin: 바깥쪽
+<table> :표 만들기
+<tr> : 줄만들기
+td : 칸 만들기
+td*2 : 두줄 만들기
+ctrl + /: 주석 (해설) - 실행하지 않음
+ - 가운데로 옮기기
+margin: : 테두리가 가운데로 이동하는 것
+<text-align: center> : 글씨 가운데로 옮기기
+<font-size: 20px;> : 글자 크기 조절
+<height: 70px;> : td 높이 조절
+<border: 1px solid black;> 표 줄 색깔
+
+ <table cellspacing="0"> : 칸 붙이는 거
+ <caption> 햄버거 비교표</caption>: 제목크키
+ </thead> : 제목 소개
+ </tbody> : 본문내용
+ 선택자 : 특정 태그를 지정할 수 있다.
+ - class, id, name, tag, > ~
+ - class : (점)으로 표시, 중복 사용이 가능하다. 
+cursor: pointer; : 마우스 손가락으로 변신
+background: 칸 색깔 바꾸기
+color : wheat : 글자 색 보이기, 바꾸기
+border: 1px solid 
+파일 이름 바꾸기 f2
+td colspan : 모양 맞추기
+class="start" : 지정한 숫자 변하기
+cellspacing : 표 칸 조절하기
+class : 가능하다 중복이
+hover : 마우스가 갔을 때 칸이 색깔이 변하는 것
+인라인스타일> 내부스타일 >외부스타일
+<td rowspan="2" : 밑에 줄이랑 합친
+
+div.menu = <div class="menu">
+inherit : 부모랑 똑같이 간다
+div : 항복구분 태그 (공간 구분 태그)
+line-height : 글자 높이 조정
+display: flex; : (((가로로)) 만드는것
+justify-content: space-between : 사이사이 공간을 만들어라
+justify-content : center : 텍스트 가운데 공간을 없애고 가운대로 집합
+글자 평균크기 : 16
+rem : 글자크기 두배 
+ 글자사이즈:   font-size: 1.5rem; 1=16(크기 지정할수있다)
+    background: url(../) 꺼내오는거
+    width (가로)  height (세로)
+    font-size: 3rem; : 글자크키
+    border-radius: 표칸 꼭지점 각도?
+    font-weight : : bold 글자 모양 변경
+
+    list-style-type: none; 
+    앞에 123 없애는 것
+    padding : 0% 때만 앞에 안뛰게 하는 것
+
+
+<ol>순서 있는 목록 태그가
+ul : 순서 없는 목록 태그
+</ol>
+<ul>
+</ul>
+
+position : 위치를 지정하는 속성 고정할수 있는 태그(광고 사이드)
+absolute : 절대 주소 기준은 부모 ,합치는것
+fixed : 고정된 주소 기준은 왼쪽 / 위쪽 (0.0)
+relative : 상대 주소 기준은 자기 자리
+top, left, right, bottom 지정 할 수 있다
+z-index (레이어 개념) 위/아래 설정(레벨) 가장 위에 올라고 겠다
+absolute fixed 설정이 되면 (위치를 지정) 공중에 붕 뜬다
+옵솔르트와 픽스드는 높이는 퍼센트로 할수있다
+transform: translateX(-50%) width : 150px = 70 
+선택자 : class, id
+id : #dmfh 표시, 중복 불가능 ( 자바스크립트에서 사용 가능하다)
+<div class="skip" onclick="vid.style.display='none'">
+    
+    
+    margin: 0; 바깥 테두리 공간
+    list-style: none : li,ol,ul 왼쪽 시작을 없애주는 것
+    padding: 0; 안쪽 테두리 공간
+
+    p:
+    span : 
+    a: 문서를 연결 태그
+      - 자동으로 손가락이 나온다
+      -밑줄이 그어짐
+      -글자색이 파랑
+      -인라인요소
+     -display: block 인라인요소를 블록으로 바꿔준다
+    text-decoration: none : 모든 글자 꾸민 효과를 없애는 것
+    <a href="">내용</a>     예 <li><a href=""> Hansot</a></li>
+     -<a href="https://www.hsd.co.kr/franchise/hansot_store"target="ch">
+     -<iframe name="ch" frameborder="0"></iframe> 이름 즉 네임을 설정을 ch를 해야한다
+    ifame : 작은 화면 
+    선택자 : class, id, name
+    사진이 div에 있으면 div에 hover 를 지정해야 한다
+     overflow: hidden : 자식이 부모보다 더 넘지 말라 사진 동영상 등등
+     transition: 0.5s :시간을 조절
+     transform: scale(1.5); : 커져라 
+     transform : 커져라 이동해라 등등 명령할 수 있는 
+     font-weight: bold: 글자 굴기 
+     <iframe name="ch" frameborder="0" </iframe> 화면속에 화면 띄우는것
+     src="https://www.hsd.co.kr/"> 새로고침해도 안없어지게 하는것
+
+
+     시멘틱태그 : 의미있는 태그들 
+     <header> : 제목 태그
+     <nav> : 메뉴태그 
+     <section> 본문 내용 태그
+     <article> 상세 내용 태그
+     <footer> 꼬리말 태그(회사주소/전화번호 기타등등)
+     <aside> 광고/배너
+     
+     display 를 쓰면 
+     justify 와
+     align-items: center: 세로 높이를 센터로 옮겨라 
+     display: 
+
+     웹폰트 : 인터넷 상에서 웹아이콘 제공(구글)
+     자식 태그에 position을 설정하려면 부모 태그에도 position이 있어야 한다
+     (없으면 자식 태그들은 부모를 벗어난다.)
+    text-indent : 글자를 이동
+      <small> : header제목보다 조금 작은 글씨할때
+
+    position: relative(부모) : position: absolute 이걸 할려면 부모가 잡아줘야한다
+     position: absolute(자식) : 하나로 모이게 하는것
+     
+     animation : 움직임
+     -움직임의 시작 : from /0%
+     -움직임의 끝 : to 100%
+      animation-fill-mode: forwards : 움직임 했다가 마지막에는 멈추는것
+
+     center: 글씨 가운데로
+    fontawesome : 이모티콘 다운 받을 수 있는 곳
+    overflow: hidden : 지정된 부모의 크기(높이,가로) 넘어가는 글씨는 다 숨기는 것
+    relative:
+    border-radius: 15px; : 테두리 모서리 조정
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section>
+         컴퓨터(대분류)
+          <article>
+              프로그램
+               <section>
+               자바 
+                  <article>
+                     연산자
+                  </article>
+               </section>
+          </article>
+      </section>
+
+      text-indent : 글자를 이동
+      <small> : header제목보다 조금 작은 글씨할때
+
+
+2023.08.03
+
+  javascipt
+
+  alert(내용표시 api) : 내용 표시 명령어
+  우주.은하계.태양계.지구.한국.서울.마포구.중앙정보처리학원=10;
+  jQuery 사용 
+  
+
+ 데이터/정보 
+
+  데이터 종류 : 
+  원시 데이터 (type) : 더 이상 분해 할 수 없다.
+      1.Number : 숫자
+      2.string : 문자
+      3.Boolean: 명제(true/false)  
+      4.undeflned : 값이 지정되닌 않은 상태
+      5.Null : 값을 모르는 상태
+  오브젝트 데이터형(type) : 원시 데이터의 모임
+      1.배열(array)
+      2.객체 (object)
+      3.클래스
+
+  변수 : 데이터값를 기억하는 임시 기억장소 (let abc-"홍길동";)
+  변수 선언법
+      1.var : any타입(어떤값이든 저장 가능)
+      2.let: 같은 타입 데이터만 입력
+      3.const: 값을 고정시킨다.(상수지정)
+  변수 만드는 법
+      1. 영문자로 시작,$,_(언더바) 시작해야 한다.
+      2.변수 사이에 공백 사용불가( ab= c =10;)
+      3.특수문자 사용 불가(a?b=10;)
+      4.예약어 ( 명령어 ): (for=10;)
+      5.변수 작명법 : 의미있는 단어(쇼핑몰 price =danga+su )
+                      name= '홍길동",age= 20;
+      카멜표기법 : 두 개의 단어로 변수/함수 명을 작성 할 때 두번째 첫 글자는 대문자로 쓴다
+                    (cardpoint = 20;) 
+     파스칼표기법 : 각 단어 첫 글자를 대문자
+                    (Cardpoint = 20;)
+      어더스토러 표기법 : 단어 사이에 언더바 넣기
+                      (card _point = 20;)
+
+
+
+
+
+
+  자바스크립트 기본 문법
+  1. 한 문장이 끝나면 ;(세미콜론) 해야 한다.
+  2. 대.소문자를 구분 (소문자 기본)
+  3. 주석(설명문)
+          한 줄 주석://
+          여러 줄 주석:/*와 */사이에 있는 것은 실행하지 않음
+  자바스크립트 실행 후 html 실행해라
+
+  함수= function: 실행문 (모임) 처리문
+   - 괄호가 있으면 함수로 인식 
+   alert("알림"), write("출력 내용")
+
+
+          document.write : 화면에 띄어라
+
+          축약형 수식
+          변수 = 변수 + 10;
+          증(감)연산자
+          count++; //후위 증가 연산자
+          ++count   // 전위 증가 연산자
+
+
+
+2023.08.04
+
+반목문 : 예제 - 시각적 구현 ( 스타일 )
+
+for(i=1; i<=5; i++) {
+
+    1초기값   2비교값  4증가값
+
+
+    document.write("<br>자동차-" + i)
+    ---------------3실행문
+}
+
+연산자 : 산술연산, 논리연사, 관계연산,
+산술연산:+,-,*,/,%(나머지연산자)
+        10%3...1 9%5...
+
+        엔티티코드 : 기호 명령어 볼 수 있는 사이트
+        getElementById: id로 지정해놓을때는 이걸 쓴다(자바스크립트)
+getElementsByTagName : 부모안에 자식태그를 지정할때 (자바스크립트)
+querySelector:
+iumsu에는 .jumsu(class) 태그가 들어감
+boolean : 데이터형 명제 ( true/false)
+                        true 숫자가 있으면 참,541, -1,-5
+                        false, 숫자 0 
+if(변수) 
+||:or 
+&&:And 그리고
+
+ var.let
+ const : 정해진 값, 변경 할 수 없는 값
+ const  abc=20 pi
+ abc=20;
+ 배열: 같은 타입의 데이터를 순서대로 기억시키는 기억장소의 집합
+ [첨자]를 사용한다.(index값을 지정-검색순서 )
+ -문자역 배역:[대괄호]사용, 콤마로 데이터를 구분한다.
+ const dataA=["국내"] 문자열 배열 선언 초기값
+
+ 프로그램 작성 도와주는 프로그램들
+ API 
+ 애플리케이션 프로그래밍 인터페이스
+ 자바 - 클래스 패키지
+ 자바스크립트 - 라이브러리(jquery,React), 프레임워크
+ jQuery : 
+
+setinterval(함수명,시간) : 일정 시간마다 반복 실행 해 주는 함수
+함수 = function = 실행문(가능)
+    - 내장 함수 ,사용자정의함수
+
+    2023 08.09
+    css: animation: 애니메이션이름, 실행시간 linear infnite
+
+    javascipt : animation( { "대상" : "값" },수행시간);
+                animation({"left" :   "-1000px})
+                animation({"left" :   "-=1000px})
+
+weight(조건) { // 조건이 만족될 동안 실행
+        break; //}
+        
+        
+        
+        function(함수-메소드(자바)) : 실행문을 저장한 코드 모임
+        -함수 선언
+        function 함수명() {
+            실행문..
+        } 
+        function 기능(역할)
+        -반복작업을 수행
+        -데이터 전달 
+        -재활용이 가능
+        -프로그램을 삭제,수정,유지보수가 쉽다.
+
+        let str = "abcdefg" //문자역 =배역
+        let out = str.replace('c','x');
+        console.log( out);
+        -내장함수 / 사용자 정의 함수
+
+        함수 호출 
+        parijy.dothome.co.kr
+
+
+    2023.08.16
+
+        java 설치 
+        java 호칭
+        -JDK : 개발도구
+            JRE : 실행 환경
+                JVM : 자바가상머신(번역 - 바이트:원도우,리눅스,유닉스)
+        -안정적인 버전 : 8,11,17-(21년도)
+       
+        https://adoptium.net/
+
+        
+        클래스 중심으로 처리됨
+        정의 : 객체를 생성할 수 있는 형태
+        기능 : 속성과 연산구조를 정의
+                속성(멤버변수)  : 객체가 갖는 기본값 정의
+                연산 (메소드 = 멤버함수)       
+
+        구조 : 속성 : 초기값
+               메소드 : 실행함수 
+               인스턴스 : 객체의 실체
+               접근자 :  PUBLIC,protected, default, private
+        클래스
+            데이터(배열) + 함수 : 관련되어 있는 데이터
+            설계도
+            사용자 정의 함수 정의
+
+        java 플랫폼이 os 위에서 실행
+            플랫폼 : 프로그램이 동작할 수 있는 실행 환경
+            java플랫폼 : java(SE (스탠다드)/EE(엔터프라이즈/ME(모바일)))
+            
+            JAVA project : 전체작업
+                        package : 작업 묶음
+                            class : 객체를 만들 수 있는 형태(틀)
+                                속성 : 상태값
+                                메소드 : 실행(동작,기능)
+        -------------------------------------------------------
+        class: 객체를 생성 할 수 있는 형태(틀)
+
+        클래스 3가지 구성요소
+         -필드(속성) : 클래스에 포함된 변수
+         -메소드(method) : 클래스 안에 있는 함수
+         -생성자 (constructor) : 객체(인스턴스)가 만들어 질때 초기값 전달
+
+        객체지향 : 객체를 중심으로 프로그램이 실행
+        (반대말 <---> 절차형 프로그램 : 위에서 아래로 순서대로 프로그램이 실행)
+        객체 : 속성과 메소드를 갖고 있다.
+        사람 hong = new 사람();
+
+        클래스 객체명 = new클래스();
+        Scanner scanf = new Scanner(System.in)
+
+
+    public  class     Print (
+    -------  ----     -----
+    공용    형태(틀)   클래스명
+    ※ public  class가 붙어있는 클래스명이 바로 파일명이다.
+       하나의 파일에 하나의 클래스가 있다.
+       여러개의 클래스가 있을 수이 있다. (public은 하나의 모든 클래스에만 있어야 함)
+    출력 명령어의 구성 : java.lang *; 기본 패키지 안 모든 클래스 
+    System.  out.   println("ok");
+    클래스    필드   메소드
+
+    windo-pret-{auto java} - (EDIT 선택) -Content assist: 밑에서 2번째 a-z
+    API 찾아보기 java api
+    -----------------
+    int : 정수 선언             int int_value = 10;
+
+    string : 문자열 선언,"(쌍따음표)로 묶어주어야 함, 글자들
+        String str ="홍길동";
+		System.out.printf("\n문자열 값 출력 : %s",str);
+		
+
+
+
+    char ch = '홍';  // 문자는 한 글자, '(따음표)로 해야만 함
+		System.out.printf("\n정수값 출력 : %c",ch);
+		System.out.println("---------------------");
+
+
+    Double dou = 65.748568;    //실수형,출력은 %f 기본 소수점 6자리까지 출력
+		System.out.printf("\n실수 갑 출력 : %f",dou);
+		System.out.println("---------------------");
+		
+
+    Boolean boo = true;    //Boolean 타입(형), 참과 거짓으로 표현, %b로 사용
+		System.out.printf("\n참(true)/거짓(fales)값 출력 : %b",boo);
+
+    -----------------
+    ctrl + alt + 화살표 아래 : 줄 복사
+
+    System.out.printf("출력양식")
+    %d : 정수
+    %f : 실수 
+    %c : 문자
+    %s : 문자열
+    %b : 논리
+
+    리터럴 : 표현값(value) -정수, 실수, 문자, 문자열,논리값
+    -정수 리터럴 : 10진수, 8진수, 16진수, 2진수
+    -실수 리터럴 : 소수점형태, 지수형태, double 타입
+    상수 : 정해진 값 final 선언
+            대문자 사용
+            값이 변하진 않는 수
+            다시는 값이 변경할 수 없는 수
+    
+    화폐 갯수 출력
+    23456원
+    만원 2장
+    천원 3창
+    백원 4장
+    십원 5개
+    일원 6개
+
+    Sycanner 클래스는 java.util 패키지 안에 있다.
+    scanf  .next() : 공백 이전까진 입력된 문자열을 읽음
+            .nextInt() : 공백 이전까지 입력된 정수 읽음
+            .nextFloat():공백 이전까지 입력된 실수 읽음
+            .nextLine(): 줄바꿈(엔터) 전까지 쓴 문자열 모두 읽는 메소드
+        p496
+        java.lang 패키지 내용 : 가장 기본적인 클래스 들이 들어있다.
+      - Object : 자바 클래스의 최상위 클래스
+                    System, string , Math,Class
+        Object 클래스는 객체 만들고 메소드를 정의 했는데 주요 메소드
+                string toString() : 객체 문자 정보를 리턴
+                int hashCode() : 객체의 해시코드를 리턴
+                boolean equals(Object obj) ; 객체의 번지를 비교해서 결과 리턴
+        System 클래스 : JVM(자바가상머신)번역(인터프리터)OS 일부 기능 사용
+                필드:out(출력-콘솔),    err(에러),  in(키보드 입력)
+                메소드
+                        exit(int status) : 프로그램 종류
+                        currenTimeMills() 현재 시간을 밀리초 단위로 long 값으로 리턴
+        string 클래스로 객체를 생성해서 사용(기본적으로 사용 가능)
+                메소드
+                        append() : 문자열 끝에 추가
+                        insert() / delete()
+                        toStning() : 문자열을 리턴
+                        replace(시작위치, 끝 , 위치 ,문자열) 
+        Math : 수학 함수
+                    메소드 
+                            Math.abs() : 절대값
+                            Math.cell(): 무조건 올림값
+                            Math.floor() : 무조건 내림값
+                            Math.max() : 가장 큰 값
+                            Math.min() : 가장 작은 값
+                            Math.random(): 난수 발생 ( 0~1 사이의 숫자)
+                            Math.round() : 5를 기준으로 반올림값
+    메소드(멤버 함수):실행 가능한 프로그램 (기능,동작)
+    1.클래스 내부, 외부,생성자 등에서 호출 해야만 실행
+    2.클래스 내부에서 호출은 메소드명();으로 호출하다.
+    3.클래스 외부에서 호출은 클래스가 만든 객체를 통해서 메소드가 호출(참조변수) 된다.
+    4.내부 메소드는 클래스의 멤버함수로 존재한다.
+
+
+    2023.08.17
+
+    JAVA템플릿 구성(소스파일 구조)
+    프로젝트
+        패키지  
+            클래스
+                멤버함수(메소드) 
+                멤버변수(속성=필드)
+                main()
+
+
+    클래스
+       정의(역할=기능=동작):객체를 생성할 수 있다
+        구성:
+                멤버변수(속성=필드) : 객체의 기본값
+                멤버함수(메소드) : 동작,기능,실행
+
+    ※클래스명의 첫 글자는 대문자로 한다.(System.out.println)()
+        변수,메소드명 : 첫 글자는 소문자로 시작
+        상수: 변하지 않는 값(상수명은 전체를 대문자)
+        public이 붙은 클래스명은 파일이름(.java) 자바 실행파일의 확장자 .class
+        일반 클래스는 publid을 쓰지 않는다.
+
+        객체 : 클래스가 생성한 Object로써 메소드를 갖고 있다.
+        인스턴스 : 클래스에서 생성된 객체의 호칭(실제값)
+
+        메소드(멤버함수) : 실행 가능한 프로그램을 코드를 갖고 동작을 한다.
+                메소드 사용법 : 클래스 내부,(다른 클래스)외부,생성자에서 호출해야만 사용 가능
+                               클래스 내부에서는 메소드명();으로 호출된다.
+                               클래스 외부에서 호출은 클래스가 객체를 만들어서 객체를 통해서 호출(참조변수)
+        
+        pubilc : 접근 지정자 중의 하나로 공용으로 사용할 수 있음을 선언
+                 public static void main() : static 메모리 영역에 고정(static)되어 누구나(public) 사용가능
+                 프로그램은 main()에서 시작해서 main()으로 끝난다. (main 메소드는 Retum 값이 없다.(void))
+        
+        자바 Base 모듈 : java.lang.java.util.java.text ....
+                (프로그램 단위)
+        
+        java.lang 패키지 안에 있는 클래스 6개 중 3개만 말해보세요 : Object,System,string,Math,Class,래퍼클래스(포장클래스)
+         
+        System 클래스에 들어있는 필드 3가지 :  System.out , System.in, System.err
+        System 클래스 : java.lang 패키지에 들어있는 클래스
+        System 클래스에 있는 입출력 메소드 3가지 : out.println, out.printf, out.print
+                out.printf : 출력 형식(포멧)의 지시자
+                        %d:정수      %f:실수    %c:문자      %s:문자열       %b:논리
+                
+
+        자료형 타입 소개 
+                기본형
+                참조형
+        --------------------
+                기본형  : int, char, Double, Boolean
+                 -정수형 : Byte(1),int(4),short(2),long(8)
+                 -실수형 : float(4),double(8)
+                 -문자형 : char(2) - 유니코드 : 전 세계 언어들을 표현 가능한 코드
+                 -논리형 : boolean(1)     // 참,거짓 (true,false)
+        
+
+        API : 애플리케이션 프로그래밍 인터페이스
+              -----------           ----------
+                응용 s/w              연걸(조작방법)
+
+        자바 API 검색 구글 java api documentation
+        -------------------------------------------------
+        참조 타입 (reference type)
+         -객체 형태로 저장됨
+         -실제 값이 저장된 메모리 주소를 저장해서 사용하는 데이터 형태
+         -String str= "abcd"; 문자열 참조 타입
+         -int arr= (10,20) 배열도 참조 타입
+         -기본 자료타입(primitive)을 객체로 취급하기 위해서 사용하는 클래스
+         -기본 자료타입(primitive)은 값을 갖는 객체를 생성할 수 있는데 이런 객체를 "표장객체" 라고 함
+         배열 안에 들어가는 값은 객체이고 그 안에 들어가는 값을 다루기 위해 참조 타입으로 변환한다.
+
+         래퍼클래스 : 기본 자료타입으로 객체를 생성할 수 있게 만든 참조타입형(8개)
+                     래펴클래스는 객체가 기본 데이터 유형을 저장 할 수 있는 특수한 클래스
+         
+         기본 타입 : 데이터일 뿐 -char       int    double boolean iong    short byte    
+         참조 타입 : 객체 생성 가능 -Character Integer Folat Double  Boolean  Long  Byte  class, interface
+         int abc = 123;   // 123이 문자이면 "123"
+
+         BigDecimal 클래스 : 소수점을 다루는 연산에 참가(사용)
+                            BigDecimal 클래스 java.math 패키지 안에 포함
+                            BigDecimal 클래스를 초기화 할때 문자열을 인수 값으로 전달한다.
+                            BigDecimal 클래스 문자열 이기에 산술연산이 안된다.
+                            BigDecimal 클래스 메소드를 사용한다.
+                            BigDecimal 클래스 값을 비교할 때는 compareTp7   
+
+        
+        Ascii Clde : 아스키코드
+         -7비트로 구성된 코드
+         -통신용으로 사용되는 코드
+         -모든 문자에 해당되는 숫자가 있다.
+         7(삐), 13(엔터), 32(스페이스), 숫자0(48) 숫자1(49)
+         대문자 A(95),  대문자 A(90)
+         대문자 a(97),  대문자 A(122)
+     

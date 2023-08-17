@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.title {
+    border: 0px solid black;
+    width: 100%; height: 1000px;
+    display: flex;
+}
+.fff {
+    border: 0px solid black;
+    width: 7%; height: 700px;
+    margin-left: 20%;
+}
+.fff div{
+    border: 0px solid red;
+    width: 100%; height: 16%;
+}
+
+.sss {
+    border: 0px solid red;
+    width: 30%; height: 600px;
+    margin-left: 20%;
+}
+.sss div {
+    border: 0px solid green;
+    width: 80%; height: 100px;
+    margin-left: 10%;
+}
+.sss input:first-child {
+    border: 1px solid green;
+    width: 80%; height: 100px;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.sss div:nth-child(2) {
+    height: 300px;
+    margin-top: 10%;
+}
+.aaa img {
+    width: 100%; height: 100%;
+}
