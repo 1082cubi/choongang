@@ -943,6 +943,37 @@ weight(조건) { // 조건이 만족될 동안 실행
 
 
 
+        09.06
+
+        replace : 함수는 자신이 바꾸고 싶은 문자로 문자열을 치환시켜주는 기능을 한다
+            String a = "화려강산 대한사람"
+            a = a.reference("대한", "민국");
+            System.out.printnl(a);
+            //결과값 : 화려강산 민국사람
+
+        replaceAll : 문자열 중에서 지정된 문자열 (regex)과 일치하는 것을 새로운 문자열(replacement)
+                     로 모두 변경한다.
+
+        wrapper class :기본 자료타입(primitive type)을 객체로 다루기 위해서 사용하는 클래스들을
+                        래퍼 클래스(wrapper class)라고 한다
+                        기본타입을 감싸고 있는 클래스
+
+    
+    // 기본타입(primitive type) : byte,short,int , long, float, bouble,char,boolea
+    // 래퍼 클래스 (wrapper class) : Byte, Shot, Integer,Long,Float,Double,Character,Boolean
+
+    // boxing(박싱) : 기본타입-> 참조타입
+    // unboxing(언박싱) : 참조타입 -> 기본타입
+
+
+        //Arrays : 배열을 다루는 메소드들 있음
+        //equals : 두 배열이 같은지
+        //fill : 배열을 특정 값으로 채우기
+        //sort : 배열 정렬
+        //binarysearch : 특정 원소의 위치 찾기
+        //toString : 문자열로 변환
+
+
 
 
 
