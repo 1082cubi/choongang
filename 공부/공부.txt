@@ -1047,7 +1047,12 @@ weight(조건) { // 조건이 만족될 동안 실행
                                 이는 축소의 특별한 경우이며 다음과 동일합니다.
 
                 abstract : 추상 메소드(abstract method)란 
-                            자식 클래스에서 반드시 오버라이딩해야만 사용할 수 있는 메소드를 의미합니다.
+                            
+                            
+                            
+                            
+                            
+                             수 있는 메소드를 의미합니다.
 
                 collect : collect()는 Stream의 데이터를 변형 등의 처리를 하고 원하는 자료형으로 변환해 줍니다.
 
@@ -1065,6 +1070,54 @@ weight(조건) { // 조건이 만족될 동안 실행
                                  2
                                  3
                                  4
+
+        2023.09.14
+
+        exception : 프로그램 실행 중 발생할 수 있는 정산적인 범위를 벗어난 경우에 처리를 하기 위한 방법
+
+        try : try 안에서 오류가 뜨면 catch넘어가서 실행을 시킨다
+        반대로 try 안에서 true면 실행이되고 catch 는 넘어간다 (실행이 안된다)
+        
+        e.printStackTrace() : exception 이 발생한 이유와 위치는 어디에서 발생했는지
+                              전체적인 단계를 다 출력합니다 위치와 정확하게 알려주어서 어디서 에러가 
+                              발생하였는지 빠르게 파악이 가능하다
+
+        finally :
+            //finally block;
+            //exception 발생과
+            // 관계없이 실행되는 block
+            System.out.println("꼭 실행 코드");
+            retrn 문을 만나도 실행이 된다
+
+
+        ArrayIndexOutOfBoundsException : 잘못된 인덱스를 사용하여 배열에 액세스했음을 나타내기 위해 발생합니다. 
+                                         인덱스는 음수이거나 배열 크기보다 크거나 같습니다.
+                                         즉 : 잘못된 인덱스일때 실행 되는 것
+
+
+        NumberFormatException : 애플리케이션이 문자열을 숫자 유형 중 하나로 변환하려고 
+                                시도했지만 문자열에 적절한 형식이 없음을 나타내기 위해 발생합니다.
+                                즉 : 문자열이 숫자 유형으로 변환하려고 할때 오류이면 실행되는 것
+
+
+        Integer.parseInt : 인트로 분석해라 -> int value = Integer.parseInt(array[i]);
+                                            (문자열을 숫자유형으로 바꿔라)
+
+        에러 = 사용자가 어찌할 수 없는 문제
+        예를들어 java명령어 자체에 오류가 있는 경우
+
+        예외 = 사용자가 코드를 작성하면서 생긴 문제
+        unchecked 랑 checked가 있는데
+        un은 굳이 체크할 필요가 없음.
+        체크를 안해도 실행됨.
+        실행중에 예외가 발생하면 런타임예외
+        RuntimeException은 unchecked exception 굳이 체크안해도 실행되는 예외
+        
+        checked exception은 반드시 체크를 해야됨
+        체크하는 2가지 방법
+        직접 try catch문을 사용하여 잡는법
+        throws를 통해 상속받을 class안에서 try문을 사용하게 하는법
+
 
 
 
