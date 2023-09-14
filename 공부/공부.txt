@@ -1112,11 +1112,14 @@ weight(조건) { // 조건이 만족될 동안 실행
         체크를 안해도 실행됨.
         실행중에 예외가 발생하면 런타임예외
         RuntimeException은 unchecked exception 굳이 체크안해도 실행되는 예외
-        
+
         checked exception은 반드시 체크를 해야됨
         체크하는 2가지 방법
         직접 try catch문을 사용하여 잡는법
         throws를 통해 상속받을 class안에서 try문을 사용하게 하는법
+
+        throw : 예외를 강제로 발생시키는것이 바로 throw 입니다. 코드를 작성하는 프로그래머가 강제로
+                예외를 발생시키는 것입니다.
 
 
 
