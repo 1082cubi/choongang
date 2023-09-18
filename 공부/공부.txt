@@ -1131,6 +1131,24 @@ weight(조건) { // 조건이 만족될 동안 실행
           프로그램이 데이터를 입력받을 때는 입력 스트림(InputStream)
           프로그램이 데이터를 보낼 때는 출력 스트림(OutputStream)
 
+    2023.9.18
+
+     // %s : 문자열 출력
+        System.out.printf("문자열:%s%n", "java");
+    // %d :  정수 십진법 출력
+        System.out.printf("정수 : %d%n",99);
+     //argument_index$
+        System.out.printf("정수2:%2$d%n정수1:%1$d%n", 100, 200);
+        System.out.printf("정수:%1$d%n", 9, 8);
+        System.out.printf("정수:%2$d%n", 9, 8);
+
+        FileReader : 파일을 불러올 수 있는
+        BufferedReader : 파일도 불러올 수 있지만 속도를 빨리 할 수 있는 기능이 있다
+
+        join() : 메소드는 실행중인 쓰레드를 강제로 실행 대기(lock) 
+                 상태로 변하게 한 뒤 특정 쓰레드가 실행되고 종료 될 때까지 기다리게 할 수 있다.
+
+
 
 
 
