@@ -1148,19 +1148,101 @@ weight(조건) { // 조건이 만족될 동안 실행
         join() : 메소드는 실행중인 쓰레드를 강제로 실행 대기(lock) 
                  상태로 변하게 한 뒤 특정 쓰레드가 실행되고 종료 될 때까지 기다리게 할 수 있다.
 
+    
+
+    어노테이션 : 코드에서 @으로 작성되는 요소를 어노테이션이라고 한다.(주석)
+
+
+    enum
+reflection
+annotation
+
+https://example.com /over/there ?name=ferret
+         서버주소       경로      쿼리스트링(파라미터) request parameter
+
+커리스트링:   이름 = 값 =으로 구분되어 있다.
+             이름 값 쌍은 & 으로 구분되어 있다.
+        
+        
+        모르는 단어들 :
+             request.getParameter
+             request : 리퀘스트 : 요청
+             WebRequest
+             require : 리콰이어드 : 요청된 : 
+             
+
+
+
+    @RequestMapping("sub2")
+    public void method2(WebRequest request) {
+        String name = request.getParameter("name");
+        String address = request.getParameter("address");
+
+        System.out.println("name = " + name);
+        System.out.println("address = " + address);
+        }
+        위에 있는 코드를 밑에 있는 코드로 바꿀수 있다
+        간편해 졌다.
+
+    @RequestMapping("sub8")
+    public void method8(@RequestParam("address") String adderess,
+                        @RequestParam("married") Boolean married,
+                        @RequestParam("age") Integer age) {
+        System.out.println("adderess = " + adderess);
+        System.out.println("married = " + married);
+        System.out.println("age = " + age);
+        }
+
+            @RequestMapping("sub1")
+    public void method1(@RequestParam String name) {
+        System.out.println("name = " + name);
+        }
+        @RequestMapping("sub3")
+    public void method3(String name, Boolean married) {
+        System.out.println("name = " + name);
+        System.out.println("married = " + married);
+        }
+
+
+        value = "age", required = false 로 구분할 수 있다 맞으면 age를 출력하고 틀리면 false로 출력
+        value = "age",defaultValue = "10" Integer age
+
+             required : 파라미터가 호출이 됐는지 안된는지
+             defaultValue : 파라미터가 생성이 됐는데 작성이 안됐을때
+
+        프로그램을 실행 될려면  쿼리파라미터와 메소드명과 매치가 되어야 한다
+
+
+
+
+        @NoArgsConstructor : 파라미터가 없는 (기본생성자)를 생성한다.
+
+        
+        @RequiredArgsConstructor : final 필드를 파라미터로 받는 생성자 생성
+        @AllArgsConstructor : 모든 필드를 파라미터로 받는 생성자 생성
+        @DATA : get,set ToSTring 다 만들어주는 생성자
+
+
+
+        @Controller
+        @RequestMapping("main8")
+        public class Controller08 
+
+        @RequestMapping("sub1")
+    public void method1(Model model) {
+        model.addAttribute("attr1", "soccer1");}
+        <h1>${attr1}</h1>
+
+        프로그램 실행 시킬때 addAttribute(String object)의 String 을 view에서 <h1>${attr1}</h1>
+        불러오면 된다.
+        view프로젝트랑 파일을 만들때 main8프로젝트로 해야하고 sub1파일로 <h1>${attr1}</h1> 작성해야한다.
 
 
 
 
 
-
-
-
-
-
-
-
-
+        단축키 : shift + shift(빠르게 연속두번) : 파일 찾는것
+                원도우 + .  : 이모티콘
 
 
 
