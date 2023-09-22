@@ -1241,13 +1241,120 @@ https://example.com /over/there ?name=ferret
 
 
 
-        단축키 : shift + shift(빠르게 연속두번) : 파일 찾는것
-                원도우 + .  : 이모티콘
+       
+
+
+     String[] myname = {"내이름은","한","의","혁"};
+        String[] you = {"1082cubi", "한메일"};
+        String[] her = {"일산"};
+        model.addAttribute("myName",myname);
+        model.addAttribute("yourEmail",you);
+        model.addAttribute("herAddress", her);
+        
+        순서를 먼저 배열을 지정을 하고 호출을 해야한다
+        
+     model.addAttribute("myName",new String[]{"lee", "kim"});
+     이렇게 줄일수가 있다 객체를 생성해서
+
+      model.addAttribute("list1", List.of("호날두", "메시"));
+      또는 List를 이용해서 배열을 할수 있다 
+      new String[] {}
+      List ()
+      
+      var :
+      var map3 = Map.of("1st", "hamburger", "2nd", "pizza");
+      Map이라는 타입이 확실이 있으니까 var를 쓸수가 있다
+       String[] you = {"1082cubi", "한메일"};
+       var you = {"1082cubi", "한메일"};    //이건 오류가 난다 var 가 확실한 데이터 타입을 모르기 때문이다
+        var her = new String[]{"일산"};     // new String을 붙임으로써 String 타입인걸 알았으니까 var를 쓸수가 있다
+
+        jsp standard tag library
+        (jstl)
 
 
 
+EL 표기법
+${ }
+
+expression : 표현
+language : 언어        
+      
+        begin과 end 포함해서 반복 end 는 begin보다 커야함 begin은 0보다 크거나 같아야함
+
+        <c:forEach begin="0" end="2" var="num">
+        <li>num : ${num}</li>
+        </c:forEach>        : 숫자를 반복할려고 하고 var는 숫자를 반복할수있는 변수를 정했고
+                              결과는: num: 0
+                                     num: 1
+                                     num: 2
+        
+
+  <c:forEach items="${names}
+        items 는 namas를 가져오는 문법이다
+        <c:forEach items="${myList}" var="i">
+        <li>cars: ${i}</li>
+        </c:forEach>    :  itmes는 가져오는 문법이다 그러므로 myList정보를 가져왔고 var="i"변수를 지정한것이다
 
 
+
+    <a a1=""> : 태그라고 부르고 그 안에서 사용되는 애들은 attribute임.
+        ex) a태그의 a1 attribute
+        ex) <pig eat="" run=""> pig태그, eat이랑run은 attribute
+
+    varStatus : var의 상태들을 알려주는 attribute
+
+    varStatus가 가지고 있는 메소드는
+    count, index, current, first, last등등 이 있음
+
+    count : var가 몇번 시행 됐는지 알려주는 메소드
+    index : 시행된 var가 몇번 index인지 알려주는 메소드
+    current : 현재 var에 저장된 값을 알려주는 메소드
+    first : 현재 var가 첫번째인지 논리값을 알려주는 메소드
+    last : 현재 var가 마지막인지 논리값을 알려주는 메소드
+    
+    <c:forEach begin="4" end="7" var="i" varStatus="status"></c:forEach>
+    
+    1번 시행하면 i는 0
+      status.count = 1
+      status.index = 0
+      status.current = 4
+      status.first = true
+      status.last = false
+    2번 시행하면 i는 1
+      status.count = 2
+      status.index = 1
+      status.current = 5
+      status.first = false
+      status.last = false
+    3번 시행하면 i는 2
+      status.count = 3
+      status.index = 2
+      status.current = 6
+      status.first = false
+      status.last = false
+    4번 시행하면 i는 3
+      status.count = 4
+      status.index = 3
+      status.current = 7
+      status.first = false
+      status.last = true
+
+
+
+     단축키 : shift + shift(빠르게 연속두번) : 파일 찾는것
+             원도우 + .  : 이모티콘
+             intellij java 단축키
+             ctrl + alt + v : 변수 생성
+             ctrl + alt + t : surround 생성
+             ctrl + alt + n : 중복 되는 변수 하나로 묶기
+             ctrl + shift + t : test 생성
+             ctrl + alt + shift + t : 리펙토리 메뉴
+             ctrl + b : 현재 커서에 있는 맴버가 생성된 파일로 이동
+             ctrl + alt + 좌,우 방향키 : 이전에 보고있던 파일로 이동
+             ctrl + shift + f10 : 현재 class의 main메소드 실행
+             ctrl + f10 : 가장 최근에 실행한 main메소드 실행
+             shift + f6 : 맴버의 이름 변경
+             ctrl + shift + f12 : 모든 윈도우 창 닫기
 
 
 
