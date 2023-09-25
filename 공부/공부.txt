@@ -1341,6 +1341,10 @@ language : 언어
 
 
 
+
+
+
+
      단축키 : shift + shift(빠르게 연속두번) : 파일 찾는것
              원도우 + .  : 이모티콘
              intellij java 단축키
@@ -1355,6 +1359,154 @@ language : 언어
              ctrl + f10 : 가장 최근에 실행한 main메소드 실행
              shift + f6 : 맴버의 이름 변경
              ctrl + shift + f12 : 모든 윈도우 창 닫기
+
+        <h4>+,-,*,/,%</h4>
+<hr>
+<p> a: 3 b :5 c : 8 d : 9</p>
+<p>${a} + ${b} = ${a+b}</p>
+<p>${c} + ${d} = ${c+d}</p>
+
+<h5>-</h5>
+<p>${a} - ${b} = ${a - b}</p>
+<p>${c} - ${d} = ${c - d}</p>
+<h5>* :곱하기</h5>
+<p>${a} - ${b} = ${a * b}</p>
+<h5>/ : 나누기</h5>
+<p>${a} - ${b} = ${a / b}</p>
+<p>${c} - ${d} = ${c / d}</p>
+<p>${a} - ${b} = ${a div b}</p>
+<p>${c} - ${d} = ${c div d}</p>
+
+<h5>% : 나머지 연산(modulo,reaminder)</h5>
+<p>${b} % ${a} = ${b%a}/p>
+<p>${c} % ${a} = ${c%a}/p>
+<p>${d} % ${a} = ${d%a}/p>
+<p>${b} % ${a} = ${b mod a}/p>
+<p>${c} % ${a} = ${c mod a}/p>
+<p>${d} % ${a} = ${d mod a}/p>
+
+<h5>()< : 우선순위 높음</h5>
+<p>${a * b - c}</p>
+<p>${a * (b - c)}</p>
+<p>${(a * b) - c}</p>
+구구단 2부터 9까지
+<c:forEach begin="2" end="9" var="i">
+        <c:forEach begin="1" end="9" var="j">
+        <p>${i} X ${j} = ${j*i}</p>
+        </c:forEach>
+    </p>
+</c:forEach>
+구구단 9부터 2까지
+<c:forEach begin="0" end="7" var="i">
+    <c:forEach begin="1" end="9" var="j">
+        <p>${9-i} X ${j} = ${(9-i)*j}</p>
+
+    </c:forEach>
+    </p>
+</c:forEach>
+<h4>||</h4>
+파이프
+
+if와 not 으로 할 수 있다 자바에서는 if 와 else로 구분되었다.
+<c:if test="${param.name eq 'son'}" var="isSon">
+    <p>hello son</p>
+</c:if>
+<c:if test="${isSon}">
+    <p>여전히 son</p>
+</c:if>
+<c:if test="${not isSon}">
+    <p>son이 아님</p>
+
+<c:if> 태그에 사용될 수 있는 속성은 다음 세 가지 입니다.
+    - test : 필수 속성으로 속성값으로 EL 비교식을 가집니다.
+    - var : 조건 결과를 저장할 변수를 지정합니다.
+    - scope : 조건 결과를 저장할 변수의 저장 scope을 지정합니다.
+    <c:if test="${name eq '홍길동'}" var="nameHong" scope="session">
+    </c:if>
+
+<c:choose> 태그는 조건에 따른 여러곳으로 분기 가능하고, 
+    조건이 맞은 것이 없을 경우 기본 분기를 제공할 수 있습니다.
+
+    <c:choose>
+    <c:when test="${name eq '김철수'}"> ... </c:when>
+    <c:when test="${name eq '박영희'}"> ... </c:when>
+    <c:otherwise> ... </c:otherwise>
+    </c:choose>
+    위 코드는 이름이 "김철수", "박영희" 일 경우 분기 하고 그 외의 경우에는 
+    <c:otherwise> 로 분기 합니다.
+
+
+   foo://example.com:8042/over/there?name=ferret#nose
+     \_/   \______________/\_________/ \_________/ \__/
+      |           |            |            |        |
+   scheme     authority       path        query   fragment
+
+
+
+
+1번 : 먼저 Controller12에와서 실행 시킨다 sub3이기때문에 그와 연결된 jsp에간다. 
+    Controller12          
+    @RequestMapping("main12")
+    @RequestMapping("sub3")
+    public void mathod3() {
+    }
+
+2번 : sub3 jsp에 오면 form안에 있는 것들을 먼저 실행한다.첫번째 위치한 text에는 name라는 곳에 저장되고 두번째test는 age곳에 저장이 된다
+     그리고 전송버튼을 눌렀을때 그제서야 form이 실행이 되서 main12/sub4에 이동하게 된다
+    @RequestMapping("sub3")
+    public void method3() {
+    }
+    <form action="/main12/sub4">
+        <input type="text" name="name">
+        <br>
+        <input type="text" name="age">
+        <br>
+        <button type="submit">전송</button>
+    </form>
+
+
+    
+3번 : 다시 sub4와 연결된 Controller12로 돌아와서 실행을 시킨다. sub3에서 값을 받아온 name과 age는  @RequestParam("name") @RequestParam("age") 으로 받고 
+        String name,Integer age 지정해서 System.out.println(name + "과 " + age + "를 저장함");  model.addAttribute("message", name + "과 " + age + "를 저장함");
+        에 들어가는 name과 age로 들어간다
+    Contrlooer12
+    @RequestMapping("sub4")
+    public void method4(
+            @RequestParam("name") String name,
+            @RequestParam("age") Integer age,
+            Model model) {
+
+        System.out.println("Controller12.method4");
+        System.out.println(name + "과 " + age + "를 저장함");
+
+        model.addAttribute("message", name + "과 " + age + "를 저장함");
+    }
+
+4번 : "${not empty message}" -> message안에 값이 들어있을때 실행을 하는 것. 순서대로 p태그를 실행을하고 <a href="/main12/sub3">새 이름과 나이 등록하러 가기</a> 것은
+        a태그는 누르면 이동하는 것이므로 다시 main12/sub3으로 간다 즉 1번째로 다시 돌아가는 것이다
+    body>
+        <c:if test="${not empty message}">
+            <p>${message}</p>
+        </c:if>
+        <a href="/main12/sub3">새 이름과 나이 등록하러 가기</a>
+    </body>
+   
+
+
+    
+
+      <c:if test="${not empty message}">
+        <p>${message}</p>
+    </c:if>
+
+    <a href="/main12/sub3">새 이름과 나이 등록하러 가기</a>
+
+
+
+
+모르는 단어 : 
+modulo,remainder
+    
 
 
 
