@@ -1467,7 +1467,8 @@ if와 not 으로 할 수 있다 자바에서는 if 와 else로 구분되었다.
 
     
 3번 : 다시 sub4와 연결된 Controller12로 돌아와서 실행을 시킨다. sub3에서 값을 받아온 name과 age는  @RequestParam("name") @RequestParam("age") 으로 받고 
-        String name,Integer age 지정해서 System.out.println(name + "과 " + age + "를 저장함");  model.addAttribute("message", name + "과 " + age + "를 저장함");
+        String name,Integer age 지정해서  model.addAttribute("message", name + "과 " + age + "를 저장함");      
+        System.out.println("Controller12.method4"); 이것은 콘솔에 잘 나오는지 테스트하기 위함이다
         에 들어가는 name과 age로 들어간다
     Contrlooer12
     @RequestMapping("sub4")
@@ -1494,13 +1495,66 @@ if와 not 으로 할 수 있다 자바에서는 if 와 else로 구분되었다.
 
 
     
+2023.09.26
+    @RequestMapping("sub3")
+    public void method3(
+        String param1,                      
+        Integer param2,
+        String param3,
+        LocalDate param4, //날짜
+        LocalDateTime param5  //날짜 시간
+//        @RequestParam("param1")String param1,
+//        @RequestParam("param2")Integer param2,
+//        @RequestParam("param3")String param3,
+//        @RequestParam("param4") LocalDate param4, 
+//        @RequestParam("param5") LocalDateTime
+        // 쿼리스트링의 이름이랑 메소드 파라미터의 이름이 같을 때 생략이( @RequestParam("param1") 쿼리스트링의 이름) 가능하다 
+           하지만 생략이 안되는 것도 있다.
+    ) 
 
-      <c:if test="${not empty message}">
-        <p>${message}</p>
-    </c:if>
+    @RequestMapping("sub5")
+    public void method5(String userId,
+                        String userEmail,
+                        LocalDate birthDate,
+                        @RequestParam(value = "hobby", required = false) String[] hobby
+    ) {
+        System.out.println("userId = " + userId);
+        System.out.println("userEmail = " + userEmail);
+        System.out.println("birthDate = " + birthDate);
+        Arrays.stream(hobby).forEach(System.out::println);
+    }
 
-    <a href="/main12/sub3">새 이름과 나이 등록하러 가기</a>
+    @RequestMapping("sub6")
+    public void method6(MyDto11 user) {
+        System.out.println("user = " + user);
+    }
 
+    //LocalDate : 날짜 타입 클래스
+
+    get 방식 : 주소에 쿼리스트링으로 붙어서 전송
+        1. 브라우저 주소란에서 볼 수 있음
+        2.길이의 제한이 있음
+
+    post 방식 : 요청 본문에 붙어서 전송
+        1.브라우저 주소란에서 볼 수 없음
+        2. 길이의 제한이 없음
+
+    //@RequestMapping(value = "sub5",method = RequestMethod.GET)
+    @GetMapping("sub5") 
+    public void method5(){}
+    해석: //@RequestMapping(value = "sub5",method = RequestMethod.GET) 이 래핑을
+          @GetMapping("sub5") 이렇게 줄일수가 있다.
+
+    //@RequestMapping(value = "sub5",method = RequestMethod.POST)
+    @PostMapping("sub6")
+    해석 : 여기도 똑같이 줄일 수가 있다.
+    public void method6(
+            String username,
+            String password
+    ){
+        System.out.println("username = " + username);
+        System.out.println("password = " + password);
+    }
 
 
 
