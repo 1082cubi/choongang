@@ -1589,9 +1589,18 @@ if와 not 으로 할 수 있다 자바에서는 if 와 else로 구분되었다.
     return "redirect:/main16/sub13";   sub13으로 보내고 없어진다
 
 
+structured
+query
+language
+database
+relational database
 
+생성 : Create
+읽기 : Read
+수정 : Update
+삭제 : Delete
 
-
+여러개의 테이블을 모아둔 것을 SCHEMA
 모르는 단어 : 
 modulo,remainder ,djxmfbajsxm
     
