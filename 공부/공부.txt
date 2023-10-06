@@ -1600,6 +1600,18 @@ relational database
 수정 : Update
 삭제 : Delete
 
+-----------------------------------------------------------------------
+sql
+
+-- ORDER BY 로 지정해주면 순서대로 지정을 해줄 수가 있다 
+-- DESC = 밑에서부터 즉 내림차순 ASC = 오름차순부터 (생략가능하다)
+-- AS : 컬럼명(테이블명) 변경
+-- 문자열 연결은 concat 사용
+
+SELECT EmployeeID, CONCAT(LastName, FirstName)  FROM employees;
+SELECT EmployeeID, CONCAT(LastName,' ', FirstName) AS name  FROM employees;
+두번째 ' '를 주므로써 띄어쓰기를 하였고 AS로 이름을 name 으로 바꿨다.
+
 여러개의 테이블을 모아둔 것을 SCHEMA
 모르는 단어 : 
 modulo,remainder ,djxmfbajsxm
