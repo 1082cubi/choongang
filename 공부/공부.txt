@@ -1615,9 +1615,126 @@ SELECT EmployeeID, CONCAT(LastName,' ', FirstName) AS name  FROM employees;
 여러개의 테이블을 모아둔 것을 SCHEMA
 모르는 단어 : 
 modulo,remainder ,djxmfbajsxm
-    
 
 
+2023.10.10
+
+
+Like 커리
+
+
+
+SELECT *
+FROM customers
+WHERE CustomerName = 'Around the Horn';
+SELECT *
+FROM customers
+WHERE CustomerName LIKE '%the%';
+SELECT *
+FROM customers
+WHERE CustomerName LIKE '%ch%';
+
+-- LIKE : 검색
+-- %, _ 기호(wildcard)와 같이
+SELECT *
+FROM customers
+WHERE CustomerName LIKE 'ch%'; -- % : ch로 시작하는 직원네임
+SELECT * FROM customers
+WHERE CustomerName LIKE '%er'; -- % es로 끝나는 직원네임
+SELECT * FROM customers
+WHERE CustomerName LIKE '%er%'; -- % 중간에 er이 들어간 직원네임
+
+SELECT * FROM employees
+WHERE FirstName LIKE '______';-- _ : 1개의 문자 아무거나
+SELECT *
+FROM employees
+WHERE LastName LIKE '____'; -- _ :1rodml 문자 아무거나
+
+SELECT *
+FROM employees
+WHERE LastName LIKE '_e%';
+
+-- 예) ch로 시작하는 상품명 조회
+SELECT * FROM products
+WHERE ProductName LIKE 'ch%';
+-- 예) es로 끝나는 상품명 조회
+SELECT * FROM  products
+WHERE ProductName LIKE '%es';
+-- 예) 중간에 use가 들어간 상품명 조회
+SELECT * FROM products
+WHERE ProductName LIKE '%use%';
+-- 예)  두번째 글자가 u인 상품명 조회
+SELECT * FROM products
+WHERE ProductName LIKE '_u%';
+
+---------------------------------------------------------------
+INSERT INTO 테이블 컬럼에 값을 넣는 SQL구문입니다.값은 테이블 전체 컬럼에 넣을 수도 있고,
+일부 컬럼에만 넣을 수도 있다.
+INSERT INTO employees (EmployeeID, FirstName, LastName)
+    VALUE (15, '김', '두식');
+
+INSERT INTO employees (EmployeeID, FirstName, LastName)
+    VALUE (16, '김');
+
+SELECT * FROM employees ORDER BY EmployeeID DESC;
+
+-- 값의 타입에 따라 넣는 방법이 다름
+INSERT INTO employees (EmployeeID)
+    value (15);
+INSERT into employees(EmployeeID)
+value ('16'); -- 되긴 됨 --
+INSERT INTO employees (LastName)
+VALUE ('son');
+INSERT INTO employees(LastName)
+value ('10000'); -- 따음표 사용 권장
+INSERT INTO employees(LastName)
+value (10000);
+INSERT INTO employees (BirthDate)
+value ('2000-01-01');
+SELECT * FROM employees order by EmployeeID DESC;
+INSERT INTO products(price)
+VALUE (20.10);
+INSERT INTO products(price)
+VALUE ('30.33'); -- 되긴 됨..
+
+
+ 
+
+
+
+
+ -- DELETE FROM tableName WHETE 조건
+-- !! WHERE 절 꼭 작성!!--
+
+SELECT *
+FROM employees
+WHERE LastName = '손';
+DELETE FROM employees WHERE LastName = '손';
+
+-- 지우기 전 같은 where 절로 지울 레코드인지 확인!!!
+
+SELECT *
+FROM employees
+WHERE FirstName = '김';
+DELETE FROM employees WHERE FirstName = '김';
+
+SELECT * FROM employees ORDER BY EmployeeID DESC;
+
+-- 예) 직원 테이블에 오늘 입력한 레코드들 지우기
+ SELECT * FROM employees
+          WHERE LastName = '이';
+DELETE FROM employees WHERE LastName = '이';
+-- 예) 상품테이블에 오늘 입력한 레코드들 지우기
+SELECT * FROM products;
+DELETE FROM products WHERE ProductName ='돈까스';
+
+
+executeUpdate 란?
+executeUpdate 메서드는 데이터베이스에서 데이터를 추가(Insert), 삭제(Delete), 수정(Update)하는 SQL 문을 실행합니다. 
+메서드의 반환 값은 해당 SQL 문 실행에 영향을 받는 행 수를 반환합니다.
+
+ExecuteQuery 란?
+수행결과로 ResultSet 객체의 값을 반환합니다.
 
 
 
