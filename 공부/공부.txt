@@ -1737,7 +1737,65 @@ ExecuteQuery 란?
 수행결과로 ResultSet 객체의 값을 반환합니다.
 
 
+2023.10.11
 
+get은 주소값을 입력했을 때 실행이 되고
+post는 눌렀을때 보내지는 것
+public void method2(@RequestParam(value = "pid", required = false) Integer royy)
+required = false : required를 쓰면 false 실행이 안되도 fales 지정해주는것
+
+
+
+  @GetMapping("sub2")
+    public void method2() {} ----> PostMapping을 했기 때문에 GetMapping을 써야 했다. jsp로 갈려면
+ @PostMapping("sub1")
+    public void method1(@RequestParam(value = "id"--->jsp에서 파라미터로 받아온것, required = false) Integer customerId---> Integer로 변수 지정하여서 밑에서 쓸수 있다) throws SQLException {
+
+        if (customerId == null) {
+            System.out.println("삭제를 id를 넣어주세요");
+            return; -----> PostMapping으로 보냈으니까 return값이 필요
+        }
+        String sql = """
+                DELETE FROM customers
+                WHERE customerId = ?
+                """;
+        Connection connection = dataSource.getConnection(); --->데이터베이스를 가져오는 
+        PreparedStatement statement = connection.prepareStatement(sql); -----> ?물음표를 쓸려면 필요한 것
+        try (connection; statement;) {
+
+            statement.setInt(1, customerId);
+            int rows = statement.executeUpdate();// inset, delete, update (Integer)
+
+            if (rows == 1) {
+                System.out.println(rows + "개 레코드 잘 지워짐");
+            } else {
+                System.out.println("잘 지워지지않음");
+            }
+        }
+    }
+
+
+
+
+
+UPDATE
+
+-- 예) 5번 직원이 notes 변경하기
+SELECT * FROM employees WHERE employeeID;
+UPDATE employees
+SET Employees.Notes = '안녕'
+where EmployeeId =5;
+-- 예) 1번 공급자의 전화번호, 주소 변경하기
+SELECT * FROM suppliers WHERE supplierid= 1;
+UPDATE suppliers
+SET suppliers.Phone = '1234'
+WHERE supplierId = 1;
+
+SELECT * FROM products
+WHERE CategoryID =1;
+UPDATE products
+SET Price = Price * 2
+WHERE CategoryID = 1;
 
 
 
