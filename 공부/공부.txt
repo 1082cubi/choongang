@@ -1798,6 +1798,60 @@ SET Price = Price * 2
 WHERE CategoryID = 1;
 
 
+2023.10.12
 
+PRIMARY KEY : not null, UNIQUE를 합쳐 놓은것
+AUTO_INCREMENT : 숫자 1,2,3,4,5... 자동적으로 늘어나는 것
+
+
+
+
+-- 예) 1996년 7월 4일 에 주문한 고객명 (customers, orders)
+SELECT CustomerName,OrderDate
+FROM customers c            --> 원래는 customers AS c 이렇게 써야하는데 AS가 생략됐다
+                                customers가 기니까 c로 쓰기 편하게 지정을 해준거다
+         JOIN orders o          --> 이것도 마찬가지 위에랑 같은 것
+                                JOIN 은 customers와 orders랑 같이 쪼인 하는 것
+              ON c.CustomerID = o.CustomerID  --> ON은 a = b 와 비슷하다 
+                                            즉 둘이 값이 똑같애 해주는 것이다
+WHERE o.OrderDate = '1996-07-04';        --> WHERE로 보고싶은 걸 적으면 된다
+
+
+
+-- 예) 1996년 7월 4일 에 주문을 담당한 직원명 (employees, orders)
+SELECT e.LastName, e.FirstName
+FROM employees e
+         JOIN orders o
+              ON e.EmployeeID = o.EmployeeID
+WHERE o.OrderDate = '1996-07-08';
+
+-------------------------------------------------------------------------
+
+-- 예 )  1996년 7월 9일에 주문한 상품명 (orders, orderDetails, products)
+SELECT OrderDate, ProductName
+FROM orders o
+         JOIN orderdetails od
+              ON o.OrderID = od.OrderID
+         JOIN products p                -->위에 예제랑 똑같지만 여기선 한번 더 JOIN을 하였다
+                                        즉 비유하자면 a = b = c 셋다 같다는 점이다
+              ON od.ProductID = p.ProductID
+WHERE OrderDate = '1996-07-09';
+
+
+-- 예 ) 'Chang' 상품이 주문된 날짜들
+SELECT ProductName, OrderDate, c.CustomerID, p.ProductID,
+CONCAT(e.FirstName,' ',         --> CONCAT(e.FirstName,' ',e.LastName) fullName 이렇게 코드를 작성하면
+                                fullName이 찍힐 때 firstName과 lastName 합쳐져서 나온다 
+                                그리고 중간에 ,' ', 이것은 띄어쓰기를 하기 위함이다.
+    e.LastName) fullName
+FROM products p
+         JOIN orderdetails od
+              ON p.ProductID = od.ProductID
+         Join orders o ON od.OrderID = o.OrderID
+         JOIN customers c
+              ON o.CustomerID = c.CustomerID
+         JOIN employees e
+              ON o.EmployeeID = e.EmployeeID
+WHERE ProductName = 'Chang';
 
      
