@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // and(&&) 그러면, 
+        // or(||) 아니면
+
+        let a = 10;
+        let b = true && a; // 그러면 
+        console.log(b);
+        let c = false || a; // 아니면
+        console.log(c);
+
+        let d = 100;
+        let e = d && 50; // 50
+        console.log(e);
+
+        let f = 0;
+        let g = f || 70;
+        console.log(g);
+
+        let h = "";
+        let i = (h || "empty string") && "blank";
+        console.log(i);
+        // destruc truthy, falsy , and, or, Template literals
+    </script>
+</body>
+</html>
