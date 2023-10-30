@@ -1960,6 +1960,14 @@ WHERE o.EmployeeID IS NULL;
 
         ResponseEntity.notfound().build();  -->404
 
+        working  ---> staging ---> .git directory
+        Directory---> Area    ---> (Repository)
+            <---------checkout the project
+            stage Fixes
+            ----------->
+                add             commit
+                        ----------------->
+                                commit
 
         git 명령어
         pwd : 현재 디렉토리 출력
@@ -1981,48 +1989,58 @@ WHERE o.EmployeeID IS NULL;
         cat (more,less) : 파일내용 보기
         git init : 현재폴더를 git이 관리하는 폴더로 만들기
         git status : 현재 리포의 상태보기
-        git add : 변경된 파일을 스테이지로 
-        git commit : 변경사항 생성
-        git log : 변경사항 히스토리 보기
-        git log --oneline : 변경사항을 한줄로 보기
-        git checkout : 변경사항 옮기기
-        git switch : 브랜치 옮기기
-        git log --all : 모든 커밋 보기
-        git log --oneline --all : 모든 커밋을 한줄로 보기
-        git branch 아무거나 : 브랜치명 커밋번호 커밋번호에 '브랜치명'라는 별칭 생성
         git add : 변경사항을 stage에 올리기
         git add . : 모든 파일 stage로 올리기
+        git commit : 변경사항 생성
+        git commit -am : tracked 파일 add, commit을 함께
+        git log : 변경사항 히스토리 보기
+        git log --oneline : 변경사항을 한줄로 보기
+        git log --all : 모든 커밋 보기
+        git log --oneline --all : 모든 커밋을 한줄로 보기
+        git checkout : 변경사항 옮기기
+        git switch : 브랜치 옮기기
+        git switch -c 브랜치명: HEAD 있는 곳으로 가서 브랜치 만들고 기존 브랜치는 오른쪽으로 이동
+        git switch 브랜치명 : HEAD가 브랜치명으로 이동g
         git restore --staged : unstage 하기
         git commit -am "tracked 파일 add,commit함께 올리는 것
         git log --graph : 그림으로 표현 (누가 부모인지 이어졌는지)
         git merge 브랜치명 : 브랜치명의 변경사항을 현재 브랜치에 반영 
                             HEAD와 브랜치명이 지정된 브랜치명으로 옮겨진다 지정된 브랜치명은 오른쪽으로 이동한다
-        git branch -d 브랜치명 : 브랜치명 지우기
-        git switch -c 브랜치명: HEAD 있는 곳으로 가서 브랜치 만들고 기존 브랜치는 오른쪽으로 이동
-        git switch 브랜치명 : HEAD가 브랜치명으로 이동
+        git branch 아무거나 : 브랜치명 커밋번호 커밋번호에 '브랜치명'라는 별칭 생성        git branch -d 브랜치명 : 브랜치명 지우기
+        git remote -v : 자세히 보기
+        git branch -vv : 브랜치 더 자세히보기
         git remote -c 브랜지명 : 브랜치를 만들고 이동
         git remote : 원격리포지토리보기
-        git remote -v : 자세히 보기
-        git push -u : 원격브랜치 추적하기  --> 예) origin/master
+        git push -u : 원격브랜치 추적하기  --> 예) origin master
         git push : 원격리포에 올리기
-        git fetch : 원격리포의 내용 로컬에 내용만 로컬에 있어서 HEAD 보다 위에 있어서 fetch를 쓰고 merge까지 적어줘야 두가지 다 있을 수 있따
         git pull : push명령어는 현재 프로젝트의 커밋된(HEAD) 내용을 원격 저장소로 내보내는 명령어
-                pull 명령어는 원격저장소에서 fetch명령어로 가져온 후 merge까지 한번에 해 실제 파일의 내용이 변경되는 명령어입니다
-        git fetch -p 
-        git fetch --prune : 삭제원격브랜치
-        #        
+                   pull 명령어는 원격저장소에서 fetch명령어로 가져온 후 merge까지 한번에 해 
+                   실제 파일의 내용이 변경되는 명령어입니다
+        git fetch : 원격리포의 내용 로컬에 내용만 로컬에 있어서 HEAD 보다 위에 있어서 
+                    fetch를 쓰고 merge까지 적어줘야 두가지 다 있을 수 있따
+        git fetch -p                        -->
+        git fetch --prune : 삭제원격브랜치   --> 위에랑 같은 뜻
+        #pull request merge 해달라는 요청    
         3way merge
         HEAD : 현재 커밋 위치
         branch : 커밋의 별칭
 
-        
-        
         git remote add origin
         git remote
         git remote -v
-         git push -u origin master
-         git branch
-         git branch -vv
+        git push -u origin master
+        git branch
+        git branch -vv
+        HEAD : 현재위치
+        HEAD~
+        HEAD~1
+        HEAD~~
+        HEAD~2
+        HEAD~3
+
+3
+
+
 
 
 
