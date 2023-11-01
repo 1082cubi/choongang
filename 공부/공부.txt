@@ -1879,8 +1879,6 @@ ON e.EmployeeID = o.EmployeeID
 WHERE o.EmployeeID IS NULL;
 
 
-
-
    .then(param => param.data) 밑에 있는 코드를 줄이면 이렇게 된다.    
                 .then(function (param) {
                     return param.data;
@@ -1920,8 +1918,6 @@ WHERE o.EmployeeID IS NULL;
                 .then(({price,birth,list,city}) => console.log(data.price));//3000 --> 그래서 {여기 안에 적어놓으면 b.price안해도 price 바로 쓸수 있다 }
         }
     </script>
-
-
 
 
 
@@ -1968,6 +1964,10 @@ WHERE o.EmployeeID IS NULL;
                 add             commit
                         ----------------->
                                 commit
+
+
+        git----------------------------------------
+
 
         git 명령어
         pwd : 현재 디렉토리 출력
@@ -2038,17 +2038,8 @@ WHERE o.EmployeeID IS NULL;
         HEAD~2
         HEAD~3
 
-3
-
-
-
-
-
         세이브(게임 임시저장 죽으면 저장되있던 곳에서 다시 시작) = 커밋
         
-
-
-    
 
         @Select("""
         SELECT CustomerName
