@@ -2085,3 +2085,68 @@ WHERE o.EmployeeID IS NULL;
             lg: "62em", // ~992px
             xl: "80em", // ~1280px
             "2xl": "96em", // ~1536px
+
+            rsf : 초기화에서 시작 할때 세팅
+
+
+
+        function App(props) {
+                function func1() {
+                console.log("func1 실행");
+
+                return (
+
+                <div>
+                    <MyComp executeClick={func1}>Button1</MyComp>
+                </div>
+                         );
+
+        설명 : func1 함수를 사용할때는 function을 만들고 지정해서 써야한다
+                하지만 더 쉽게 애로우function을 활용하면 더욱 간편하다
+
+                return 
+                 <Button onClick={() => console.log("first")}>버튼1</Button>
+        설명 : 저 긴 위 코드가 애로우function을 써서  이렇게 간편하게 줄어들었다
+            
+
+            function handleClick() {
+                console.log("second");
+            }
+            return
+            <div>
+            <Button onClick={handleClick}>버튼2</Button>
+            <div>
+
+        맨위에 처럼 함수를 지정하고 사용할때는 관습처럼 함수 이름 앞에 handle 붙여준다고 한다.
+
+
+        모든 이벤트 인터페이스 이름은 "Event"로 끝난다는 사실도 확인할 수 있습니다.
+
+        DOM
+        도큐먼트 오브젝트 모델
+
+
+        메소드-----------------
+        e.preventDefault(); -->e. 뜻은 event 를 줄여서 e 
+        이 메소드의 뜻은 방지 ,예방 이라는 뜻을 가지고있다
+        실행하려는 것을 정지시키고 멈추거나 다른 것을 실행 할 수 있다
+
+        //event bubbling 막는 메소드
+        e.stopPropagation();
+
+        useState : useState는 컴포넌트에 상태 변수를 추가할 수 있는 React Hook입니다.
+        onChange :  이벤트 핸들러 함수. 제어된 입력에 필요합니다. 
+                    사용자가 입력 값을 변경하면 즉시 실행됩니다(예: 키 입력 시마다 실행). 
+                    브라우저 입력 이벤트처럼 작동합니다.
+
+        let a = 10
+        let b = 20
+        a+b = 30
+
+        let a = 10
+        let b = "20"
+        a+b = '1020'
+
+        a+Number(b) = 30;  -->number를 대문자 Number를 적어주면 string이였던 글자가 숫자로 변한다
+
+
