@@ -2150,3 +2150,86 @@ WHERE o.EmployeeID IS NULL;
         a+Number(b) = 30;  -->number를 대문자 Number를 적어주면 string이였던 글자가 숫자로 변한다
 
 
+        function App(props) {
+  const [text, setText] = useState("hello");
+
+  function handleButtonClick() {
+    //text 라는 state 값 변경
+    setText("greeting");
+  }
+
+  return (
+    <div>
+      <p>
+        <Button onClick={handleButtonClick}> 상태변경</Button>
+        {text}
+      </p>
+    </div>
+  );
+}
+
+        설명 : 버튼을 누르면 handleButtonClick 메소드가 실행 useState에서 setText를 지정해줬으니까
+        setText("greeting")을 넣어주면 버튼을 누를때 greeting로 변경이 된다.
+
+        use = hook
+         // HOOK : use 로 시작 하는 함수
+        // hook은 컴포넌트 상단에 작성해야함
+
+        자바에서는 string 은 참조타입이지만
+        자바스크립트에서는 string 가본타입
+
+        구조할당
+
+        deepcopy 값
+        얕은 카피 주소
+
+
+
+
+                    function App() {
+              const [message, setMessage] = useState("");
+              const [obj, setObj] = useState({ message: "" });
+            
+              function handleObjectMessageChange(e) {
+                // obj.message = e.target.value;
+                // setObj(obj);
+            
+                // const newobj = { ...obj };
+                // newobj.message = newobj.message + 1;         ---> 이 코드를 밑에 있는 코드로 줄일 수 있다
+                // setObj(newobj);
+            
+                setObj({ obj, message: e.target.value });
+              }
+            
+              return (
+                <>
+                  <Box>
+                    <Input value={message} onChange={(e) => setMessage(e.target.value)} />
+                    <Text>{message}</Text>
+                  </Box>
+                  <Box>
+                    <Input value={obj.message} onChange={handleObjectMessageChange} />
+                    <Text>{obj.message}</Text>
+                  </Box>
+                </>
+              );
+            }
+
+
+
+        // setItems([...items, text]); 밑에 코드를 줄여서 위에 코드처럼 쓸 수 있다 (복사)
+
+    const nextItems=[...items];
+    nextitems.push(text);
+    setItems(nextItems);
+
+        
+        // setItems(items.filter((item, i) => i != index)); --> 이 코드를 해석하면 밑에 있는 코드와 같다 (지우기)
+
+      const nextItems = [...items];
+      nextItems.splice(index, 1);
+
+      setItems(nextItems);
+
+
+
