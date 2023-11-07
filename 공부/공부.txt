@@ -2231,5 +2231,111 @@ WHERE o.EmployeeID IS NULL;
 
       setItems(nextItems);
 
+      shift와 F6을 같이 누르면 같은 값 이름이 같이 지정 되면서 이름을 바꿀수 있고 어떤게 같은 것인지 알수 있다
+
+      draft : 복사된 값 선배들이 이렇게 지정했다 그리고 함수명은 관례대로 update를 앞에 써서
+                updateperson1 이렇게 지정을 한다 그리고 원래 객체인 것 처럼 사용할 수 있다 
+
+      onChange : 입력하면 값이 바뀌고 등록되는 
+      
+        MyComp1에 있는 버튼을 눌렀을때  MyComp2의 텍스트가 변경되는 
+       const [message, setMessage] = useState("hello"); 이것을 App메소드 밖에 쓰는 것이 아니라
+       MyComp1 MyComp2가 같이 일을 해야 하니 메인인 App메소드안에 적어야 한다
+       usestate를 App에 적으면 된다
+       App에서 받을 려면 트랍(파라미터,MyComp1 onClick= onClick이 트랍)으로 받아야 한다 -->예)  <MyComp2 message={message}></MyComp2> 요런 식으로
+        message는 MyComp2에 setmessage는 MyComp1에
 
 
+
+
+
+        -----> 예시 
+
+        function MyInput({ address, onChange }) {
+  function handleInputChange(e) { 
+    onChange(e.target.value);           ------> arrow funtion으로 바꾸면 (e) => onChange(e.target.value)} 이렇게 된다
+    --> 2. e로 onChange를 받고 target.value값을 받는다
+  }
+  return (
+    <Box>
+      <Input value={address} onChange={handleInputChange}></Input>
+        --> 1. Input으로 입력받은 값을 handleInputChange function으로 이동
+    </Box>
+  );
+}
+
+function MyText({ address }) {
+  return (
+    <Box>
+      <Text>{address}</Text>
+    </Box>
+  );
+}
+
+function App(props) {
+  const [address, setAddress] = useState(""); -->5번
+
+  function handleInputChange(text) {        -->4번
+    setAddress(text);
+  }
+  return (
+    <div>
+      <MyInput address={address} onChange={handleInputChange}></MyInput>  -->6번
+      --> 3번 
+      {/*//클릭*/}
+      <MyText address={address}></MyText>
+      {/*바뀌게*/}
+    </div>
+  );
+}
+
+
+
+
+--->예시 createContext()
+
+function CComp() {
+  // 3. context 사용하기 : useContext(Context); 
+  const message = useContext(MessageContext);   -->createContext()를 useContext()로 받을 수가 있다
+
+  return <Text>받은 메시지 : {message}</Text>;
+}
+
+function Bcomp() {
+  return <CComp />;
+}
+
+function Acomp() {
+  return <Bcomp />;
+}
+
+function App(props) {
+  const [message, setMessage] = useState("");
+
+  // message state를 Ccomp에 전달 하기
+  // 1. context 만들기 : createContext();
+  // 2. context에 state 넣기
+  //    : <Context.Provider value={state}></Context.Provider>
+  // 3. tree안에 context사용하기
+
+  return (
+    <div>
+      <Button onClick={() => setMessage("바꾼 메시지!!!")}>
+        메시지 바꾸기
+      </Button>
+      <MessageContext.Provider value={message}>     -->2. state 값을 받으려면 MessageContext.Provider value={} 여기에 입력해야된다
+        <Acomp />
+      </MessageContext.Provider>
+    </div>
+  );
+}
+
+// 1. context 만들기
+// context 이름은 대문자로 시작하고 Context로 끝남 // App 밖에다 써야한다
+const MessageContext = createContext(null);  ----> 1. CComp에서 쓸려면 createContext()함수를 쓰면 된다
+
+export default App;
+
+useEffect(()=>{},[]) :첫번째 파라미터는 실행할 함수
+                     :두번째 파라미터는 첫번째파라미터를 실행 시키는 값, 빈 배열이면 초기 렌더링 때만 실행됨
+요청 받을 때 쓰는 then() 메소드
