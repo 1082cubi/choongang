@@ -2372,7 +2372,7 @@ toast({
 })
 
 
-
+g
 모르는 것들 
 데이터베이스 BoardService 코드들
 sql inserted DATETIME DEFAULT now()
