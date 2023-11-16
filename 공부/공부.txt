@@ -2393,6 +2393,31 @@ toast({
 
 
 1번 : int[] answer = Arrays.copyOfRange(numbers, num1, num2+1);
+
+알파벳 모음을 제거한 배열을 리턴
+1번 :  String[] alpha = new String[]{"a","e","i","o","u"};
+        for (String a : alpha) {
+            my_string = my_string.replaceAll(a, ""); --> my_string으로 받아야 값이 변하면서 원하는 결과를 받을 수있다
+                                                        answer = my_string.replaceAll(a, ""); 이러면 안됌
+        }
+        return my_string;
+
+
+2번 :   StringBuilder sb = new StringBuilder();
+        String[] love = {"a","e","i","o","u"};
+        String[] can = my_string.split("");
+        for(int i = 0; i< can.length; i++) {
+            int count = 0;
+            for(int j = 0; j < love.length; j++) {
+                if(love[j].equals(can[i])) {  
+                    count++;
+                }     
+            }
+            if (count == 0) sb.append(can[i]);
+            count = 0;
+        }
+        
+        return sb.toString();
     
 
 
