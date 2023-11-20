@@ -2422,10 +2422,10 @@ toast({
 
 
 
-g
-모르는 것들 
-데이터베이스 BoardService 코드들
-sql inserted DATETIME DEFAULT now()
+
+repeat : 데이터타입 String 반환값 String 문자열을 반복 횟수만큼 연결한 값의 문자열을 반환합니다.
+matches() : string 타입 반환값은 boolean 으로 반환하고 regex : 정규식 표현 ("[a-z]")      
+            (a-z, A-Z, 0-9, …) 이렇게 지정할 수 있다  !(a-z, A-Z, 0-9, …) 아닌 경우에만 허용하는 정규표현식
 
 루트 : 설명 1 : 2 2제곱은 4이다 루트로 표현하면 2는  루트4 이다
        설명 2 : 3의 3제곱은 9이다  루트로 표현하면 3은 루트9이다
